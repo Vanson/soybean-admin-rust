@@ -1,0 +1,539 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_api'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-api"
+                ],
+                "filter": {
+                    "name": "server_api",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'axum_casbin'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=axum-casbin"
+                ],
+                "filter": {
+                    "name": "axum_casbin",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'test_middleware'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test_middleware",
+                    "--package=axum-casbin"
+                ],
+                "filter": {
+                    "name": "test_middleware",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'test_middleware_domain'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test_middleware_domain",
+                    "--package=axum-casbin"
+                ],
+                "filter": {
+                    "name": "test_middleware_domain",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'test_set_enforcer'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=test_set_enforcer",
+                    "--package=axum-casbin"
+                ],
+                "filter": {
+                    "name": "test_set_enforcer",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_core'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-core"
+                ],
+                "filter": {
+                    "name": "server_core",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_config'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-config"
+                ],
+                "filter": {
+                    "name": "server_config",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_global'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-global"
+                ],
+                "filter": {
+                    "name": "server_global",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_constant'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-constant"
+                ],
+                "filter": {
+                    "name": "server_constant",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_service'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-service"
+                ],
+                "filter": {
+                    "name": "server_service",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_model'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-model"
+                ],
+                "filter": {
+                    "name": "server_model",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_utils'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-utils"
+                ],
+                "filter": {
+                    "name": "server_utils",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'xdb'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=xdb"
+                ],
+                "filter": {
+                    "name": "xdb",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug benchmark 'search'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bench=search",
+                    "--package=xdb"
+                ],
+                "filter": {
+                    "name": "search",
+                    "kind": "bench"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'sea_orm_adapter'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=sea-orm-adapter"
+                ],
+                "filter": {
+                    "name": "sea_orm_adapter",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'migration'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=migration"
+                ],
+                "filter": {
+                    "name": "migration",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'migration'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=migration",
+                    "--package=migration"
+                ],
+                "filter": {
+                    "name": "migration",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'migration'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=migration",
+                    "--package=migration"
+                ],
+                "filter": {
+                    "name": "migration",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_initialize'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-initialize"
+                ],
+                "filter": {
+                    "name": "server_initialize",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'jwt'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=jwt",
+                    "--package=server-initialize"
+                ],
+                "filter": {
+                    "name": "jwt",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'jwt_auth_middleware'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=jwt_auth_middleware",
+                    "--package=server-initialize"
+                ],
+                "filter": {
+                    "name": "jwt_auth_middleware",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'lib'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=lib",
+                    "--package=server-initialize"
+                ],
+                "filter": {
+                    "name": "lib",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_middleware'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-middleware"
+                ],
+                "filter": {
+                    "name": "server_middleware",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_router'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-router"
+                ],
+                "filter": {
+                    "name": "server_router",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_resource'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-resource"
+                ],
+                "filter": {
+                    "name": "server_resource",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'server'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=server",
+                    "--package=server-bin"
+                ],
+                "filter": {
+                    "name": "server",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'server'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=server",
+                    "--package=server-bin"
+                ],
+                "filter": {
+                    "name": "server",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'server_shared'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=server-shared"
+                ],
+                "filter": {
+                    "name": "server_shared",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

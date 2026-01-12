@@ -4,8 +4,8 @@ use tokio::net::TcpListener;
 
 #[tokio::main]
 async fn main() {
-    let config_path = if cfg!(debug_assertions) {
-        "server/resources/application-test.yaml"
+    let config_path: &'static str = if cfg!(debug_assertions) {
+        "server/resources/application-dev.yaml"
     } else {
         "server/resources/application.yaml"
     };

@@ -18,27 +18,18 @@ impl MigrationTrait for Migration {
                             .col(SysUserRole::UserId)
                             .col(SysUserRole::RoleId),
                     )
-                    .to_owned(),
-            )
-            .await?;
-
-        // Add foreign key constraints
-        manager
-            .create_foreign_key(
-                ForeignKey::create()
-                    .name("fk_sys_user_role_user_id")
-                    .from(SysUserRole::Table, SysUserRole::UserId)
-                    .to(Alias::new("sys_user"), Alias::new("id"))
-                    .to_owned(),
-            )
-            .await?;
-
-        manager
-            .create_foreign_key(
-                ForeignKey::create()
-                    .name("fk_sys_user_role_role_id")
-                    .from(SysUserRole::Table, SysUserRole::RoleId)
-                    .to(Alias::new("sys_role"), Alias::new("id"))
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_sys_user_role_user_id")
+                            .from(SysUserRole::Table, SysUserRole::UserId)
+                            .to(Alias::new("sys_user"), Alias::new("id")),
+                    )
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_sys_user_role_role_id")
+                            .from(SysUserRole::Table, SysUserRole::RoleId)
+                            .to(Alias::new("sys_role"), Alias::new("id")),
+                    )
                     .to_owned(),
             )
             .await
